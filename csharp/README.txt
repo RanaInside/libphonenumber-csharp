@@ -6,6 +6,21 @@ This is a C# port of libphonenumber, originally from:
 
 Original Java code is Copyright (C) 2009-2011 Google Inc.
 
+Forked Update
+--------------
+
+Changes made to support portable Profile 158;
+- changed one public method
+	IReadOnlyDictionary<int, List<String>> CallingCodeToRegion
+to
+	IEnumerable<KeyValuePair<int, List<String>>> CallingCodeToRegion
+- minimum changes to main fork with one patched file to add support for 
+missing methods.
+Note: SortedDictionary implementation is super slow; for my purpose 
+(calling it once in a while with single number), it is fine. I might implement
+a proper SortedDictionary<TKey, TValue> at some point.
+
+
 
 Project Layout
 --------------

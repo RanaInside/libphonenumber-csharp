@@ -7,6 +7,11 @@ Cloned from [https://bitbucket.org/pmezard/libphonenumber-csharp](https://bitbuc
 > The library is now working out of the box on a Windows Phone
 
 
+## Forked Update
+
+Supports portable Profile 158
+
+
 # From the original WIKI
 ## Conversion Notes
 

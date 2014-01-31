@@ -114,6 +114,7 @@ namespace PhoneNumbers
         // by that country calling code. In the case of multiple regions sharing a calling code, such as
         // the NANPA regions, the one indicated with "isMainCountryForCode" in the metadata should be
         // first.
+        
         private Dictionary<int, List<String>> countryCallingCodeToRegionCodeMap_ = null;
 
         // The set of regions the library supports.
@@ -849,7 +850,8 @@ namespace PhoneNumbers
             return normalizedNumber.ToString();
         }
 
-        public IReadOnlyDictionary<int, List<String>> CallingCodeToRegion
+        // Converted from IReadOnlyDictionary<int, List<String>> CallingCodeToRegion to support Profile158
+        public IEnumerable<KeyValuePair<int, List<String>>> CallingCodeToRegion
         {
             get { return countryCallingCodeToRegionCodeMap_; }
         }
